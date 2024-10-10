@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import iconsSprite from "../../assets/images/icons_sprite.svg";
-import { Icon } from '../icon/Icon';
+import { Icon } from '../../../../components/icon/Icon';
 
-type ComponentPropsType = {
+type CardPropsType = {
     position: string,
     occupation: string,
     organization: string,
@@ -11,7 +10,7 @@ type ComponentPropsType = {
     period: string,
 }
 
-export const AboutComponent = (props:ComponentPropsType) => {
+export const Card = (props:CardPropsType) => {
     return (
         <div>
             <StyledDiv>
