@@ -29,7 +29,7 @@ const SocialList = styled.ul`
 `
 
 const SocialItem = styled.li`
-    
+    list-style: none;
 `
 const SocialLink = styled.a`
     
