@@ -9,7 +9,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <FlexWrapper justfy={"space-between"} align={"center"}>
-                <Menu menuItems={items}/>
+                <Menu menuItems={items} variant={"footer"}/>
                 <Copyright>Designed and built by <ColorText>Pavan MG</ColorText> with <ColorText>Love</ColorText> & <ColorText>Coffee</ColorText></Copyright>
             </FlexWrapper>
         </StyledFooter>
