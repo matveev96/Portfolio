@@ -33,6 +33,10 @@ const StyledMenu = styled.nav<{ variant: 'header' | 'footer' | 'darkMode' }>`
         props.variant === "header" && css`
         a {
             color: ${theme.colors.font.darkContent};
+            font-weight: 500;
+            font-size: 2rem;
+            line-height: 130%;
+            text-align: center;
         }
     `}
 
@@ -40,6 +44,9 @@ const StyledMenu = styled.nav<{ variant: 'header' | 'footer' | 'darkMode' }>`
         props.variant === "footer" && css`
       a {
         color: ${theme.colors.font.darkTitle};
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 144%;
       }
     `}
 
