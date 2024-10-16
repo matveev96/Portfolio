@@ -7,6 +7,7 @@ export const theme = {
         },
 
         occupationBg: "#d7ffe0",
+        borderBg: "#ebeaed",
 
         font: {
             darkContent: "#666",
