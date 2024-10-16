@@ -4,7 +4,7 @@ import photo from "../../../assets/images/avatar.webp"
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
-
+import { Icon } from "../../../components/icon/Icon";
 
 
 export const Main = () => {
@@ -18,7 +18,11 @@ export const Main = () => {
                         <Name>PavanMG</Name>
                         <MainTitle>I build things for web</MainTitle>
                     </TextWrapper>
-                    <PhotoWrapper></PhotoWrapper>
+                    <PhotoWrapper>
+                        <Abstraction>
+                            <Icon iconId={"abstractionMain"} width="770" height="770" viewBox="0 0 770 770" color="transparent"/>
+                        </Abstraction>
+                    </PhotoWrapper>
                 </FlexWrapper>
             </Container>
             
@@ -29,7 +33,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
     display: flex;
-    min-height: 870px;
+    min-height: 1024px;
 `
 const TextWrapper = styled.div`
     max-width: 636px;
@@ -80,5 +84,11 @@ const PhotoWrapper = styled.div`
         z-index: -1;
     }
 `
-
+const Abstraction = styled.div`
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    z-index: -2;
+`
 
