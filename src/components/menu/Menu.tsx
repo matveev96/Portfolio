@@ -27,6 +27,7 @@ const StyledMenu = styled.nav<{ variant: 'header' | 'footer' | 'darkMode' }>`
     ul {
         display: flex;
         justify-content: space-between;
+        font-family: 'DM Sans';
     }
 
     ${(props) =>
@@ -43,6 +44,7 @@ const StyledMenu = styled.nav<{ variant: 'header' | 'footer' | 'darkMode' }>`
     ${(props) =>
         props.variant === "footer" && css`
       a {
+        font-family: 'DM Sans';
         color: ${theme.colors.font.darkTitle};
         font-weight: 400;
         font-size: 1.8rem;
