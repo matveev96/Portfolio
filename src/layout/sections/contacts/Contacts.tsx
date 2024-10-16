@@ -4,6 +4,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Logo } from "../../../components/logo/Logo";
 import { Social } from "../../../components/social/Social";
+import { theme } from "../../../styles/Theme";
 
 export const Contacts = () => {
     return (
@@ -11,11 +12,11 @@ export const Contacts = () => {
             <SectionTitle>For any questions please mail me:</SectionTitle>
             <StyledLink href="#">hi@pavanmg.in</StyledLink>
             <FlexWrapper justfy="space-between">
-                <Logo/>
+                <Logo color={theme.colors.font.darkTitle}/>
                 <StyledContactsContainer>
                     <StyledLink href="#">+91 12345 09876</StyledLink>
                     <StyledLink href="#">info@example.com</StyledLink>
-                    <Social/>
+                    <Social color={theme.colors.font.darkTitle}/>
                 </StyledContactsContainer>
             </FlexWrapper>
         </StyledContacts>
