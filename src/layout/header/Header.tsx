@@ -26,6 +26,7 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
+    background-color: ${theme.colors.pageBg.lightMode};
     padding-top: 41px;
     position: fixed;
     top: 0;
