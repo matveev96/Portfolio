@@ -3,7 +3,8 @@ import { theme } from "../styles/Theme";
 
 type TextPropsType = {
     color?: string,
-    weight?: string
+    weight?: string,
+    marginBtm?: string,
 }
 
 export const SectionText = styled.p<TextPropsType>`
@@ -11,4 +12,5 @@ export const SectionText = styled.p<TextPropsType>`
     font-weight: ${props => props.weight || "400"};
     font-size: 1.8rem;
     line-height: 144%;
+    margin-bottom: ${props => props.marginBtm};
 `
