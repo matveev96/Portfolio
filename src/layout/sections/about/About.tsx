@@ -33,7 +33,6 @@ export const About = () => {
                                 
                             </StyledSection>
                         </AboutWrapper>
-
                         <AbstractFigure>
                             <Icon iconId="bricksWhiteMode" width="591" height="1019" viewBox="0 0 591 1019"/>
                         </AbstractFigure>
@@ -74,7 +73,9 @@ const Title = styled.h3`
 const AbstractFigure = styled.div`
     position: absolute;
     content: "";
-    left: 1000px;
-    top: -150px;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    /* transform-origin: top left; */
 
 `
