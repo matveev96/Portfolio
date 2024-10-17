@@ -19,22 +19,21 @@ export const Main = () => {
                         <MainTitle>I build things for web</MainTitle>
                     </TextWrapper>
                     <PhotoWrapper>
-                        <Abstraction>
+                        <AbstractFigure>
                             <Icon iconId={"abstractionMain"} width="770" height="770" viewBox="0 0 770 770" color="transparent"/>
-                        </Abstraction>
+                        </AbstractFigure>
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
-            
-            
         </StyledMain>
     )
 }
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     display: flex;
-    min-height: 1024px;
+    height: 100vh;
 `
+
 const TextWrapper = styled.div`
     max-width: 636px;
     width: 100%;
@@ -84,11 +83,14 @@ const PhotoWrapper = styled.div`
         z-index: -1;
     }
 `
-const Abstraction = styled.div`
+
+const AbstractFigure = styled.div`
     content: "";
     position: absolute;
-    top: -200px;
-    left: -200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: top left;
     z-index: -2;
 `
 
