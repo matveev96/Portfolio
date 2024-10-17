@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/matveev96/IT-Incubator-Project-1/static/css/main.31d6cfe0.css",
-    "main.js": "/matveev96/IT-Incubator-Project-1/static/js/main.9558639b.js",
+    "main.js": "/matveev96/IT-Incubator-Project-1/static/js/main.c0700c0a.js",
     "static/js/787.25eaef86.chunk.js": "/matveev96/IT-Incubator-Project-1/static/js/787.25eaef86.chunk.js",
     "static/media/project_6.webp": "/matveev96/IT-Incubator-Project-1/static/media/project_6.e4bda2e5bd90c2dd9ee1.webp",
     "static/media/project_1.webp": "/matveev96/IT-Incubator-Project-1/static/media/project_1.71a544d741ebc24aa24a.webp",
@@ -12,11 +12,11 @@
     "static/media/icons_sprite.svg": "/matveev96/IT-Incubator-Project-1/static/media/icons_sprite.969708776c841ccf9bf1d4c9f60783b2.svg",
     "static/media/avatar.webp": "/matveev96/IT-Incubator-Project-1/static/media/avatar.ab639021a875a5efff1e.webp",
     "index.html": "/matveev96/IT-Incubator-Project-1/index.html",
-    "main.9558639b.js.map": "/matveev96/IT-Incubator-Project-1/static/js/main.9558639b.js.map",
+    "main.c0700c0a.js.map": "/matveev96/IT-Incubator-Project-1/static/js/main.c0700c0a.js.map",
     "787.25eaef86.chunk.js.map": "/matveev96/IT-Incubator-Project-1/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.9558639b.js"
+    "static/js/main.c0700c0a.js"
   ]
 }
