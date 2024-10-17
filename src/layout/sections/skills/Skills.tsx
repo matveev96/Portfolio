@@ -34,5 +34,5 @@ export const Skills = () => {
 }
 
 const StyledSkills = styled.section`
-    height: 100vh;
+    
 `
