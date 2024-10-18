@@ -54,6 +54,7 @@ const ImageBox = styled.div`
 const ContentBox = styled.div`
     width: 315px;
     margin: 0 auto;
+    padding-bottom: 25px;
 `
 
 const Image = styled.img`
@@ -79,13 +80,14 @@ const Stack = styled.h4`
 const LinkBox = styled.div`
     display: flex;
     gap: 48px;
-    margin-bottom: 25px;
+    
 `
 
 const LinkItem = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    color: ${theme.colors.font.black};
 `
 
 const Link = styled.a`
