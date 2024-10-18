@@ -4,10 +4,12 @@ type TitlePropsType = {
         align?: string,
         color?: string,
         fontSize?: string,
-        marginBtm?: string
+        marginBtm?: string,
+        family?: string
 }
 
 export const SectionTitle = styled.h2<TitlePropsType>`
+        font-family: ${props => props.family};
         font-weight: 700;
         color: ${props => props.color};
         text-align: ${props => props.align || "center"};
