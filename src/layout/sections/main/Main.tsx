@@ -9,7 +9,7 @@ import { Icon } from "../../../components/icon/Icon";
 
 export const Main = () => {
     return (
-        <StyledMain>
+        <StyledMain id="0">
             <Container>
                 <FlexWrapper justfy="space-between" wrap="wrap" align="center">
                     <TextWrapper>

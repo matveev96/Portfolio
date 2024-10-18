@@ -11,7 +11,7 @@ import { theme } from "../../../styles/Theme";
 
 export const About = () => {
     return (
-            <StyledAbout>
+            <StyledAbout id="1">
                 <Container>
                     <FlexWrapper >
                         <AboutWrapper>

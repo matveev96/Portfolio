@@ -15,7 +15,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Projects = () => {
     return (
-        <StyledProjects>
+        <StyledProjects id="3">
             <Container>
                 <SectionTitle align="center" fontSize="4.8rem" color={theme.colors.font.darkTitle} marginBtm="50px">Projects</SectionTitle>
                 <SectionSubtitle fontSize="3.2rem" align="center" color={theme.colors.font.darkContent} marginBtm="130px">Things I’ve built so far</SectionSubtitle>

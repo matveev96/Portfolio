@@ -10,7 +10,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <StyledSkills id="2">
             <Container>
                 <SectionTitle align="center" fontSize="4.8rem" color={theme.colors.font.darkTitle} marginBtm="50px">My Tech Stack</SectionTitle>
                 <SectionSubtitle fontSize="3.2rem" align="center" color={theme.colors.font.darkContent} marginBtm="130px"> Technologies I’ve been working with recently</SectionSubtitle>
