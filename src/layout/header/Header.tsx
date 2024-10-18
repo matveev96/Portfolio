@@ -17,7 +17,7 @@ export const Header = () => {
                     <Logo variation={'logoGradient'} />
                     <MenuBox>
                         <Menu menuItems={items} variant={"header"}/>
-                        <Social color={theme.colors.font.darkContent}/>
+                        <Social colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
                     </MenuBox>
                 </FlexWrapper>
             </Container>
