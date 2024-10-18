@@ -70,6 +70,7 @@ const InfoContainer = styled.div<{display?: "none"}>`
     align-items: center;
     gap: 8px;
     flex: 1 1 33%;
+    color: ${theme.colors.font.lightContent};
 
     ${props => props.display === "none" && css`
         display: none;
