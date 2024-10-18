@@ -9,13 +9,14 @@ type LogoPropsType = {
 
 export const Logo = (props:LogoPropsType) => {
     return (
-        <StyledLogo href="#">
-            <Icon iconId={props.variation || "logo"} height="59" width="97" viewBox="0 0 100 60" color={props.color}/>
+        <StyledLogo href="#" color={props.color}>
+            <Icon iconId={props.variation || "logo"} height="59" width="97" viewBox="0 0 100 60" />
         </StyledLogo>
     )
 }
 
-const StyledLogo = styled.a`
+const StyledLogo = styled.a<{color?: string}>`
+    color: ${props => props.color};
     display: inline-block;
     height: 59px;
 `

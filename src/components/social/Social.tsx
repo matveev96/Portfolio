@@ -1,27 +1,29 @@
 import React from "react";
 import { Icon } from '../icon/Icon';
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 type SocialPropsType = {
-    color: string
+    hoverColor?: string,
+    colorSVG?: string
 }
 
 export const Social = (props:SocialPropsType) => {
     return (
         <SocialList>
             <SocialItem>
-                <SocialLink href="">
-                    <Icon iconId={"githubMini"} height="30" width="30" viewBox="0 0 30 32" color={props.color}/>
+                <SocialLink href="#" colorSVG={props.colorSVG} hoverColor={props.hoverColor}>
+                    <Icon iconId={"githubMini"} height="30" width="30" viewBox="0 0 30 32" />
                 </SocialLink>
             </SocialItem>
             <SocialItem>
-                <SocialLink href="">
-                    <Icon iconId={"twitterMini"} height="30" width="30" viewBox="0 0 30 32" color={props.color}/>
+                <SocialLink href="#" colorSVG={props.colorSVG} hoverColor={props.hoverColor}>
+                    <Icon iconId={"twitterMini"} height="30" width="30" viewBox="0 0 30 32" />
                 </SocialLink>
             </SocialItem>
             <SocialItem>
-                <SocialLink href="">
-                    <Icon iconId={"linkdInMini"} height="30" width="30" viewBox="0 0 30 30" color={props.color}/>
+                <SocialLink href="#" colorSVG={props.colorSVG} hoverColor={props.hoverColor}>
+                    <Icon iconId={"linkdInMini"} height="30" width="30" viewBox="0 0 30 30" />
                 </SocialLink>
             </SocialItem>
         </SocialList>
@@ -37,6 +39,12 @@ const SocialList = styled.ul`
 const SocialItem = styled.li`
     list-style: none;
 `
-const SocialLink = styled.a`
-    
+
+const SocialLink = styled.a<SocialPropsType>`
+    display: inline-block;
+    color: ${props => props.colorSVG};
+    &:hover {
+        color: ${props => props.hoverColor};
+        transform: translateY(-5%);
+    }
 `
