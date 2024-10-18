@@ -13,7 +13,7 @@ export const Menu = (props: MenuPropsType) => {
             <ul>
                 {props.menuItems.map((item: string, index: number) => {
                     return <li key={index}>
-                        <a href="#">{item}</a>
+                        <a href={`#${index}`}>{item}</a>
                     </li>
                 })}
             </ul>
@@ -27,7 +27,7 @@ const StyledMenu = styled.nav<{ variant: 'header' | 'footer' | 'darkMode' }>`
     ul {
         display: flex;
         justify-content: space-between;
-        font-family: 'DM Sans';
+        font-family: 'DM Sans', sans-serif;
     }
 
     ${(props) =>
