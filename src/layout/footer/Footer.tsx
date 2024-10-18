@@ -25,7 +25,7 @@ export const Footer = () => {
                     </InfoBox>
                     
                     <InfoBox>
-                        <Menu menuItems={items} variant={"footer"}/>
+                    <Menu menuItems={items} weight="400" size="1.8rem" colorMask={theme.colors.font.darkTitle} colorMaskLine={theme.colors.font.contactsTitle} colorMaskHover={theme.colors.font.contactsTitle}/>
                         <Copyright><ColorText>Designed and built by </ColorText>Pavan MG<ColorText> with </ColorText>Love<ColorText> & </ColorText>Coffee</Copyright>
                     </InfoBox>
                     

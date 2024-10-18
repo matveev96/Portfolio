@@ -16,7 +16,7 @@ export const Header = () => {
                 <FlexWrapper justfy="space-between"  wrap="wrap">
                     <Logo variation={'logoGradient'} />
                     <MenuBox>
-                        <Menu menuItems={items} variant={"header"}/>
+                        <Menu menuItems={items} weight="500" size="2rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
                         <Social colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
                     </MenuBox>
                 </FlexWrapper>
