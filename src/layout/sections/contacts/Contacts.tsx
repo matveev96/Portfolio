@@ -5,35 +5,36 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Logo } from "../../../components/logo/Logo";
 import { Social } from "../../../components/social/Social";
 import { theme } from "../../../styles/Theme";
+import { Container } from "../../../components/Container";
 
 export const Contacts = () => {
     return (
-        <StyledContacts>
-            <SectionTitle>For any questions please mail me:</SectionTitle>
-            <StyledLink href="#">hi@pavanmg.in</StyledLink>
-            <FlexWrapper justfy="space-between">
-                <Logo color={theme.colors.font.darkTitle}/>
-                <StyledContactsContainer>
-                    <StyledLink href="#">+91 12345 09876</StyledLink>
-                    <StyledLink href="#">info@example.com</StyledLink>
-                    <Social color={theme.colors.font.darkTitle}/>
-                </StyledContactsContainer>
-            </FlexWrapper>
+        <StyledContacts id="4">
+            <Container>
+                <FlexWrapper direction="column" justfy="center" align="center" gap="10px">
+                    <SectionTitle family="DM Sans, sans-serif" fontSize="5.8rem" color={theme.colors.font.contactsTitle}>For any questions please mail me:</SectionTitle>
+                    <StyledLink href="mailto:#&body=Hello?subject=Question">hi@pavanmg.in</StyledLink>
+                </FlexWrapper>
+            </Container>
         </StyledContacts>
     )
 }
 
 const StyledContacts = styled.section`
-    border-bottom: 1px solid #666666;
+    height: 100vh;
+    display: flex;
+    margin-bottom: 0;
 `
 
 const StyledLink = styled.a`
     display: block;
+    font-family: DM Sans, sans-serif;
     text-align: center;
+    font-size: 5.8rem;
+    font-weight: 700;
+    background: ${theme.colors.font.gradient};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 `
 
-const StyledContactsContainer = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 20px;
-`
