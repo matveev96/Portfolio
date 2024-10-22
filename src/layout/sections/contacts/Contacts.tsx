@@ -13,7 +13,7 @@ export const Contacts = () => {
             <Container>
                 <FlexWrapper direction="column" justfy="center" align="center" gap="10px">
                     <SectionTitle family="DM Sans, sans-serif" fontSize="5.8rem" color={theme.colors.font.contactsTitle}>For any questions please mail me:</SectionTitle>
-                    <StyledLink href="mailto:#&body=Hello?subject=Question">hi@pavanmg.in</StyledLink>
+                    <StyledLink href="mailto:hi@pavanmg.in&body=Hello?subject=Question">hi@pavanmg.in</StyledLink>
                 </FlexWrapper>
             </Container>
         </StyledContacts>
