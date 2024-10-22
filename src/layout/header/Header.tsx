@@ -6,6 +6,7 @@ import { Social } from '../../components/social/Social';
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
+import { MenuMobile } from "../../components/menu/MenuMobile";
 
 const items = ["Home", "About", "Tech Stack", "Projects", "Contacts"];
 
@@ -19,6 +20,8 @@ export const Header = () => {
                         <Menu menuItems={items} weight="500" size="2rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
                         <Social colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
                     </MenuBox>
+
+                    <MenuMobile menuItems={items} weight="500" size="3rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -42,4 +45,8 @@ const MenuBox = styled.div`
     max-width: 790px;
     width: 100%;
     padding-top: 8px;
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
