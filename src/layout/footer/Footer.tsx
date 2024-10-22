@@ -18,8 +18,8 @@ export const Footer = () => {
                     <InfoBox>
                         <Logo color={theme.colors.font.darkTitle}/>
                         <ContactsContainer>
-                            <StyledLink href="#">+91 12345 09876</StyledLink>
-                            <StyledLink href="#">info@example.com</StyledLink>
+                            <StyledLink href="tel:+911234509876">+91 12345 09876</StyledLink>
+                            <StyledLink href="mailto:info@example.com&body=Hello?subject=Question">info@example.com</StyledLink>
                             <Social colorSVG={theme.colors.font.darkTitle} hoverColor={theme.colors.font.darkContent}/>
                         </ContactsContainer>
                     </InfoBox>
