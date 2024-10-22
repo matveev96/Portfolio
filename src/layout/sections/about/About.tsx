@@ -14,7 +14,7 @@ export const About = () => {
             <StyledAbout id="1">
                 <Container>
                     <FlexWrapper >
-                        <AboutWrapper>
+                        <AboutInfo>
                             <StyledSection>
                                 <Title>About Me</Title>
                                 <SectionText>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</SectionText>
@@ -32,9 +32,9 @@ export const About = () => {
                                 <Card position="Bachelor in Electronics & Communication" occupation="Full Time" organization="Bangalore Instutute of Technology" display="none" period="Aug 2015 - Dec 2020"/>
                                 
                             </StyledSection>
-                        </AboutWrapper>
+                        </AboutInfo>
                         <AbstractFigure>
-                            <Icon iconId="bricksWhiteMode" width="591" height="1019" viewBox="0 0 591 1019"/>
+                            <Icon iconId="bricksWhiteMode" width="621" height="1019" viewBox="0 120 621 1019"/>
                         </AbstractFigure>
                         
                         
@@ -50,7 +50,7 @@ const StyledAbout = styled.section`
     position: relative;
 `
 
-const AboutWrapper = styled.div`
+const AboutInfo = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 710px;
@@ -73,9 +73,9 @@ const Title = styled.h3`
 const AbstractFigure = styled.div`
     position: absolute;
     content: "";
-    top: 50%;
-    left: 80%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    right: 0;
+    /* transform: translate(-50%, -50%); */
     /* transform-origin: top left; */
 
 `
