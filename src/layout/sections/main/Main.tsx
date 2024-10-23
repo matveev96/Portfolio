@@ -4,7 +4,8 @@ import photo from "../../../assets/images/avatar.webp"
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
-import { Icon } from "../../../components/icon/Icon";
+import AbstractMain from "../../../assets/images/AbstractMain.svg"
+
 
 
 export const Main = () => {
@@ -18,11 +19,7 @@ export const Main = () => {
                         <Name>PavanMG</Name>
                         <MainTitle>I build things for web</MainTitle>
                     </TextWrapper>
-                    <PhotoWrapper>
-                        <AbstractFigure>
-                            <Icon iconId={"abstractionMain"} width="770" height="770" viewBox="0 0 770 770" color="transparent"/>
-                        </AbstractFigure>
-                    </PhotoWrapper>
+                    <PhotoWrapper/>
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -31,16 +28,15 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     display: flex;
-    height: 100vh;
+    height: 80vh;
+    overflow: hidden;
 `
 
 const TextWrapper = styled.div`
     max-width: 636px;
     width: 100%;
-    min-height: 297px;
     font-weight: 700;
     font-size: 5.8rem;
-    line-height: 121%;
     color: ${theme.colors.font.darkTitle};
 `
 
@@ -63,8 +59,8 @@ const MainText = styled.p`
 const PhotoWrapper = styled.div`
     position: relative;
     border-radius: 230px;
-    width: 349px;
-    height: 349px;
+    width: 350px;
+    height: 350px;
     background-image: url(${photo});
     background-repeat: no-repeat;
     background-position: center center;
@@ -82,15 +78,17 @@ const PhotoWrapper = styled.div`
         border-radius: 230px;
         z-index: -1;
     }
-`
 
-const AbstractFigure = styled.div`
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: top left;
-    z-index: -2;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 770px;
+        height: 770px;
+        background-image: url(${AbstractMain});
+        z-index: -2;
+    }
 `
 
