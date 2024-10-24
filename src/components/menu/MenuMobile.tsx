@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { theme } from '../../styles/Theme';
-import { Social } from "../social/Social";
+import { Socials } from "../socials/Socials";
 
 
 type MenuPropsType = {
@@ -35,7 +35,7 @@ export const MenuMobile = (props: MenuPropsType) => {
                             </Link>
                         </ListItem>
                     })}
-                    <Social colorSVG={theme.colors.font.darkContent} />
+                    <Socials colorSVG={theme.colors.font.darkContent} />
                 </MobileList>
             </MenuMobilePopup>
 
