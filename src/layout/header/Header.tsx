@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
 import { Menu } from "../../components/menu/Menu";
-import { Social } from '../../components/social/Social';
+import { Socials } from "../../components/socials/Socials";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
@@ -18,7 +18,7 @@ export const Header = () => {
                     <Logo variation={'logoGradient'} />
                     <MenuBox>
                         <Menu menuItems={items} weight="500" size="2rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
-                        <Social colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
+                        <Socials colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
                     </MenuBox>
 
                     <MenuMobile menuItems={items} weight="500" size="3rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
@@ -31,7 +31,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
     background-color: ${theme.colors.pageBg.lightMode};
     padding-top: 40px;
-    position: sticky;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
