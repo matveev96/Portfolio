@@ -26,6 +26,8 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.font.darkContent};
         background-color: ${theme.colors.pageBg.lightMode};
+
+        padding-top: 140px;
 }
 
 a {
