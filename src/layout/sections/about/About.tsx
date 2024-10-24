@@ -1,19 +1,17 @@
 import React from "react";
-import { FlexWrapper } from '../../../components/FlexWrapper';
+import { FlexWrapper } from "../../../components/FlexWrapper";
 import styled from "styled-components";
-import { Card } from './card/Card';
-import { Icon } from '../../../components/icon/Icon';
-import { SectionTitle } from "../../../components/SectionTitle";
+import { Card } from "./card/Card";
 import { SectionText } from "../../../components/SectionText";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
-
+import AbstractAbout from "../../../assets/images/AbstractAbout.svg"
 
 export const About = () => {
     return (
             <StyledAbout id="1">
                 <Container>
-                    <FlexWrapper >
+                    <FlexWrapper>
                         <AboutInfo>
                             <StyledSection>
                                 <Title>About Me</Title>
@@ -30,31 +28,39 @@ export const About = () => {
                             <StyledSection>
                                 <Title>Education</Title>
                                 <Card position="Bachelor in Electronics & Communication" occupation="Full Time" organization="Bangalore Instutute of Technology" display="none" period="Aug 2015 - Dec 2020"/>
-                                
                             </StyledSection>
-                        </AboutInfo>
-                        <AbstractFigure>
-                            <Icon iconId="bricksWhiteMode" width="621" height="1019" viewBox="0 120 621 1019"/>
-                        </AbstractFigure>
-                        
-                        
+                        </AboutInfo>                        
                     </FlexWrapper>
                 </Container>
             </StyledAbout>
-
     )
 }
 
 
 const StyledAbout = styled.section`
     position: relative;
+
+    &::after {
+        content: "";
+        top: -5%;
+        right: 0;
+        display: block;
+        width: 591px;
+        height: 1019px;
+        background-image: url(${AbstractAbout});
+        background-repeat: no-repeat;
+        z-index: -19;
+
+        position: absolute;
+    }
+
 `
 
 const AboutInfo = styled.div`
-    display: flex;
-    flex-direction: column;
     max-width: 710px;
     width: 100%;
+    overflow: hidden;
+
 `
 
 const StyledSection = styled.div`
@@ -64,18 +70,6 @@ const StyledSection = styled.div`
 const Title = styled.h3`
     font-weight: 700;
     font-size: 4.2rem;
-    line-height: 124%;
     color: ${theme.colors.font.darkTitle};
     margin-bottom: 3.8rem;
-
-`
-
-const AbstractFigure = styled.div`
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    /* transform: translate(-50%, -50%); */
-    /* transform-origin: top left; */
-
 `
