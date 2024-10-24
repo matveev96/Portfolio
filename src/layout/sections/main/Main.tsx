@@ -5,6 +5,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 import AbstractMain from "../../../assets/images/AbstractMain.svg"
+import { font } from "../../../styles/Common";
 
 
 
@@ -12,11 +13,11 @@ export const Main = () => {
     return (
         <StyledMain id="0">
             <Container>
-                <FlexWrapper justfy="space-between" wrap="wrap" align="center">
+                <FlexWrapper justfy="space-between" wrap="wrap" align="center" tabletJustify="center">
                     <TextWrapper>
                         <MainText>Hi 👋,</MainText>
                         <MainText>My name is</MainText>
-                        <Name>PavanMG</Name>
+                        <MainName>PavanMG</MainName>
                         <MainTitle>I build things for web</MainTitle>
                     </TextWrapper>
                     <PhotoWrapper/>
@@ -35,13 +36,14 @@ const StyledMain = styled.section`
 const TextWrapper = styled.div`
     max-width: 636px;
     width: 100%;
-    font-weight: 700;
-    font-size: 5.8rem;
+    ${font({weight: 700, Fmax: 58, Fmin: 36})};
     color: ${theme.colors.font.darkTitle};
+    
 `
 
-const Name = styled.h2`
-    font-size: 5.8rem;
+const MainName = styled.h2`
+    /* font-size: 5.8rem; */
+    font-size: inherit;
     background: ${theme.colors.font.gradient};
     background-clip: text;
     -webkit-background-clip: text;
@@ -49,11 +51,11 @@ const Name = styled.h2`
 `
 
 const MainTitle = styled.h1`
-    font-size: 5.8rem;
+    font-size: inherit;
 `
 
 const MainText = styled.p`
-    
+    font-size: inherit;
 `
 
 const PhotoWrapper = styled.div`
@@ -89,6 +91,20 @@ const PhotoWrapper = styled.div`
         height: 770px;
         background-image: url(${AbstractMain});
         z-index: -2;
+    }
+
+
+    @media ${theme.media.tablet} {
+        width: 300px;
+        height: 300px;
+        &::after {
+            display: none;
+        }
+    }
+
+    @media ${theme.media.mobile} {
+        width: 250px;
+        height: 250px;
     }
 `
 
