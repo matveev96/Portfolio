@@ -28,6 +28,14 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.pageBg.lightMode};
 
         padding-top: 140px;
+
+        @media ${theme.media.proTablet} {
+            padding-top: 260px;
+        }
+
+        @media ${theme.media.miniTablet} {
+            padding-top: 100px;
+        }
 }
 
 a {
@@ -45,7 +53,15 @@ button {
 
 section {
     margin-bottom: 200px;
+
+    @media ${theme.media.proTablet} {
+        margin-bottom: 70px;
+    }
+    @media ${theme.media.mobile} {
+        margin-bottom: 50px;
+    }
 }
+
 
 @media (performance-reduced-motion: reduce) {
     *,
