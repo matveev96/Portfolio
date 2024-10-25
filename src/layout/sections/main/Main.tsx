@@ -13,7 +13,7 @@ export const Main = () => {
     return (
         <StyledMain id="0">
             <Container>
-                <FlexWrapper justfy="space-between" wrap="wrap" align="center" tabletJustify="center">
+                <FlexWrapper justfy="space-between" tabletJustify="center" wrap="wrap" align="center"  >
                     <TextWrapper>
                         <MainText>Hi 👋,</MainText>
                         <MainText>My name is</MainText>
@@ -31,6 +31,13 @@ const StyledMain = styled.section`
     display: flex;
     height: 80vh;
     overflow: hidden;
+    @media ${theme.media.proTablet} {
+        height: auto;
+    }
+
+    /* @media ${theme.media.mobile} {
+        height: 80vh;
+    } */
 `
 
 const TextWrapper = styled.div`
@@ -38,11 +45,13 @@ const TextWrapper = styled.div`
     width: 100%;
     ${font({weight: 700, Fmax: 58, Fmin: 36})};
     color: ${theme.colors.font.darkTitle};
-    
+
+    @media ${theme.media.proTablet} {
+        margin: 50px 0;
+    }
 `
 
 const MainName = styled.h2`
-    /* font-size: 5.8rem; */
     font-size: inherit;
     background: ${theme.colors.font.gradient};
     background-clip: text;
@@ -52,6 +61,10 @@ const MainName = styled.h2`
 
 const MainTitle = styled.h1`
     font-size: inherit;
+    white-space: nowrap;
+    @media ${theme.media.mobile} {
+        white-space: normal;
+    }
 `
 
 const MainText = styled.p`
@@ -94,9 +107,10 @@ const PhotoWrapper = styled.div`
     }
 
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.proTablet} {
         width: 300px;
         height: 300px;
+        margin: 10px 0;
         &::after {
             display: none;
         }
