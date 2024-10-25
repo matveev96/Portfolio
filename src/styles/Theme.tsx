@@ -24,6 +24,7 @@ export const theme = {
     },
 
     media: {
+        miniDesktop: "screen and (max-width: 1225px)",
         proTablet: "screen and (max-width: 1024px)",
         miniTablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 576px)"
