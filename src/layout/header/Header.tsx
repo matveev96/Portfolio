@@ -14,7 +14,7 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justfy="space-between"  wrap="wrap">
+                <FlexWrapper justfy="space-between"  tabletJustify="center" mobileJustify="space-between" wrap="wrap" >
                     <Logo variation={'logoGradient'} />
                     <MenuBox>
                         <Menu menuItems={items} weight="500" size="2rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
@@ -46,7 +46,14 @@ const MenuBox = styled.div`
     width: 100%;
     padding-top: 8px;
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.proTablet} {
+        max-width: 900px;
+        padding-top: 30px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    @media ${theme.media.miniTablet} {
         display: none;
     }
 `
