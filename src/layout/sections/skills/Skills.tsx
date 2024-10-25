@@ -12,9 +12,9 @@ export const Skills = () => {
     return (
         <StyledSkills id="2">
             <Container>
-                <SectionTitle align="center" fontSize="4.8rem" color={theme.colors.font.darkTitle} marginBtm="50px">My Tech Stack</SectionTitle>
-                <SectionSubtitle fontSize="3.2rem" align="center" color={theme.colors.font.darkContent} marginBtm="130px"> Technologies I’ve been working with recently</SectionSubtitle>
-                <FlexWrapper wrap={"wrap"}  justfy="center" gap="90px">
+                <SectionTitle align="center" fontSize={48} color={theme.colors.font.darkTitle} marginBtm="50px" marginBtmTablet="20px">My Tech Stack</SectionTitle>
+                <SectionSubtitle fontSize={32} align="center" color={theme.colors.font.darkContent} marginBtm="130px" marginBtmTablet="50px"> Technologies I’ve been working with recently</SectionSubtitle>
+                <GridWrapper>
                     <Skill iconId={"html"}/>
                     <Skill iconId={"css"}/>
                     <Skill iconId={"js"}/>
@@ -27,7 +27,7 @@ export const Skills = () => {
                     <Skill iconId={"greenshock"}/>
                     <Skill iconId={"vsCode"}/>
                     <Skill iconId={"github"} viewBox="-5 -5 100 100"/>
-                </FlexWrapper>
+                </GridWrapper>
             </Container>
         </StyledSkills>
     )
@@ -35,4 +35,25 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
     
+`
+
+const GridWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    grid-auto-rows: minmax(120px, auto);
+    gap: 95px;
+    /* justify-items: center;
+    align-items: center; */
+    justify-content: center;
+
+    @media ${theme.media.miniDesktop} {
+        grid-template-columns: repeat(4, 120px);
+    }
+    @media ${theme.media.miniTablet} {
+        grid-template-columns: repeat(auto-fill, 120px);
+    }
+    @media ${theme.media.mobile} {
+        grid-template-columns: repeat(2, 120px);
+        gap: 60px;
+    }
 `
