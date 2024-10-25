@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { Icon } from '../../../../components/icon/Icon';
 import { theme } from "../../../../styles/Theme";
+import { font } from "../../../../styles/Common";
 
 type CardPropsType = {
     position: string,
@@ -53,6 +54,7 @@ const CardContainerTop = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 4px;
 `
 
 const CardContainerBottom = styled.div`
@@ -62,6 +64,16 @@ const CardContainerBottom = styled.div`
 
     & :nth-of-type(3){
         justify-content: flex-end;
+    }
+
+    @media ${theme.media.mobile} {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+
+        & :nth-of-type(3){
+            justify-content: flex-start;
+        }
     }
 `
 
@@ -75,23 +87,25 @@ const InfoContainer = styled.div<{display?: "none"}>`
     ${props => props.display === "none" && css`
         display: none;
     `}
-
-
 `
 
 const Info = styled.span`
     font-weight: 500;
     font-size: 1.2rem;
-    line-height: 233%;
     letter-spacing: 0.08em;
     color: ${theme.colors.font.lightContent};
 `
 
 const Position = styled.h4`
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 140%;
+    ${font({weight: 400, Fmax: 20, Fmin: 16})};
+    /* font-weight: 400;
+    font-size: 2rem; */
+    line-height: 1.4;
     letter-spacing: 0.05em;
+
+    @media ${theme.media.mobile} {
+        flex-basis: 70%;
+    }
     `
 
 const Occupation = styled.span`
@@ -102,7 +116,7 @@ const Occupation = styled.span`
     color: ${theme.colors.font.occupationFont};
     font-weight: 600;
     font-size: .9rem;
-    line-height: 289%;
+    line-height: 2.8;
     text-align: center;
 `
 

@@ -6,12 +6,13 @@ import { SectionText } from "../../../components/SectionText";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import AbstractAbout from "../../../assets/images/AbstractAbout.svg"
+import { font } from "../../../styles/Common";
 
 export const About = () => {
     return (
             <StyledAbout id="1">
                 <Container>
-                    <FlexWrapper>
+                    <FlexWrapper tabletJustify="center">
                         <AboutInfo>
                             <StyledSection>
                                 <Title>About Me</Title>
@@ -39,19 +40,25 @@ export const About = () => {
 
 const StyledAbout = styled.section`
     position: relative;
+    overflow: hidden;
 
     &::after {
         content: "";
-        top: -5%;
-        right: 0;
+        top: -15%;
+        left: 65%;
         display: block;
-        width: 591px;
+        width: 935px;
         height: 1019px;
         background-image: url(${AbstractAbout});
         background-repeat: no-repeat;
-        z-index: -19;
 
         position: absolute;
+    }
+
+    @media ${theme.media.proTablet} {
+        &::after {
+        display: none;
+    }
     }
 
 `
@@ -68,8 +75,11 @@ const StyledSection = styled.div`
 `
 
 const Title = styled.h3`
-    font-weight: 700;
-    font-size: 4.2rem;
+    ${font({weight: 700, Fmax: 42, Fmin: 32})};
     color: ${theme.colors.font.darkTitle};
     margin-bottom: 3.8rem;
+
+    @media ${theme.media.proTablet} {
+        text-align: center;
+    }
 `
