@@ -37,6 +37,13 @@ const Link = styled.a<{weight?: string, size?: string}>`
     color: transparent;
     font-weight: ${props => props.weight};
     font-size: ${props => props.size};
+
+    @media ${theme.media.proTablet} {
+        font-size: 3rem;
+    }
+    @media ${theme.media.mobile} {
+        font-size: 1.6rem;
+    }
 `
 
 const StyledMenu = styled.nav`
@@ -46,6 +53,14 @@ const StyledMenu = styled.nav`
         display: flex;
         justify-content: space-between;
         font-family: 'DM Sans', sans-serif;
+    }
+
+    @media ${theme.media.proTablet} {
+        max-width: 810px;
+    }
+
+    @media ${theme.media.mobile} {
+        max-width: 510px;
     }
 
 `
