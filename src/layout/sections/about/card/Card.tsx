@@ -54,7 +54,7 @@ const CardContainerTop = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 `
 
 const CardContainerBottom = styled.div`
