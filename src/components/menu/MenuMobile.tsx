@@ -48,7 +48,7 @@ export const MenuMobile = (props: MenuPropsType) => {
 const StyledMenuMobile = styled.nav`
     display: none;
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.miniTablet} {
         display: block;
     }
 
