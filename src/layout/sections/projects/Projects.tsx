@@ -17,16 +17,16 @@ export const Projects = () => {
     return (
         <StyledProjects id="3">
             <Container>
-                <SectionTitle align="center" fontSize="4.8rem" color={theme.colors.font.darkTitle} marginBtm="50px">Projects</SectionTitle>
-                <SectionSubtitle fontSize="3.2rem" align="center" color={theme.colors.font.darkContent} marginBtm="130px">Things I’ve built so far</SectionSubtitle>
-                <FlexWrapper wrap={"wrap"} justfy="space-between" gap="34px">
+                <SectionTitle align="center" fontSize={48} color={theme.colors.font.darkTitle} marginBtm="50px" marginBtmTablet="20px">Projects</SectionTitle>
+                <SectionSubtitle fontSize={32} align="center" color={theme.colors.font.darkContent} marginBtm="130px" marginBtmTablet="50px">Things I’ve built so far</SectionSubtitle>
+                <GridWrapper>
                     <Project src={projectOne} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />
                     <Project src={projectTwo} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />
                     <Project src={projectThree} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />
                     <Project src={projectFour} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />
                     <Project src={projectFive} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />
                     <Project src={projectSix} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />
-                </FlexWrapper>
+                </GridWrapper>
             </Container>
         </StyledProjects>
     )
@@ -34,4 +34,20 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     
+`
+
+const GridWrapper = styled.div`
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, maxmin(auto, 375px));
+    grid-column-gap: 34px;
+    grid-row-gap: 62px;
+
+    @media ${theme.media.miniDesktop} {
+        grid-column-gap: 62px;
+    }
+
+    @media ${theme.media.proTablet} {
+        grid-row-gap: 34px;
+    }
 `
