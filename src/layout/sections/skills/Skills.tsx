@@ -42,8 +42,6 @@ const GridWrapper = styled.div`
     grid-template-columns: repeat(auto-fill, 120px);
     grid-auto-rows: minmax(120px, auto);
     gap: 95px;
-    /* justify-items: center;
-    align-items: center; */
     justify-content: center;
 
     @media ${theme.media.miniDesktop} {
@@ -54,6 +52,7 @@ const GridWrapper = styled.div`
     }
     @media ${theme.media.mobile} {
         grid-template-columns: repeat(2, 120px);
-        gap: 60px;
+        grid-column-gap: 40px;
+        grid-row-gap: 20px;
     }
 `
