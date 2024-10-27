@@ -14,10 +14,10 @@ export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justfy="space-between"  tabletJustify="center" mobileJustify="space-between" wrap="wrap" >
+                <FlexWrapper justfy="space-between"  tabletJustify="center" miniTabletJustify="space-between" wrap="wrap" >
                     <Logo variation={'logoGradient'} />
                     <MenuBox>
-                        <Menu menuItems={items} weight="500" size="2rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
+                        <Menu menuItems={items} weight="500" size="2rem" proTabletSize="2.8rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
                         <Socials colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
                     </MenuBox>
 
@@ -31,11 +31,18 @@ export const Header = () => {
 const StyledHeader = styled.header`
     background-color: ${theme.colors.pageBg.lightMode};
     padding-top: 40px;
+    padding-bottom: 10px;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 9999;
+    @media ${theme.media.proTablet} {
+        padding-top: 20px;
+    }
+    @media ${theme.media.miniTablet} {
+        padding-top: 40px;
+    }
 `
 
 const MenuBox = styled.div`
@@ -48,7 +55,9 @@ const MenuBox = styled.div`
 
     @media ${theme.media.proTablet} {
         max-width: 900px;
-        padding-top: 30px;
+        padding-top: 10px;
+        flex-wrap: nowrap;
+        
         gap: 30px;
         justify-content: center;
     }
