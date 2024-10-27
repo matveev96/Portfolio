@@ -39,7 +39,7 @@ const StyledProjects = styled.section`
 const GridWrapper = styled.div`
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, maxmin(auto, 375px));
+    grid-template-columns: repeat(auto-fill, minmax(auto, 375px));
     grid-column-gap: 34px;
     grid-row-gap: 62px;
 
@@ -48,6 +48,7 @@ const GridWrapper = styled.div`
     }
 
     @media ${theme.media.proTablet} {
+        grid-column-gap: 24px;
         grid-row-gap: 34px;
     }
 `
