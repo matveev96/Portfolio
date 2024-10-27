@@ -36,7 +36,7 @@ const SocialList = styled.ul`
     gap: 20px;
 
     @media ${theme.media.proTablet} {
-        gap: 40px;
+        gap: 30px;
     }
 `
 
