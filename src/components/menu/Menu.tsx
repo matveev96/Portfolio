@@ -6,6 +6,7 @@ type MenuPropsType = {
     menuItems: Array<string>,
     weight?: string,
     size?: string,
+    proTabletSize?: string,
     colorMask?: string,
     colorMaskHover?: string,
     colorMaskLine?: string
@@ -16,8 +17,8 @@ export const Menu = (props: MenuPropsType) => {
         <StyledMenu>
             <ul>
                 {props.menuItems.map((item: string, index: number) => {
-                    return <ListItem key={index} colorMaskLine={props.colorMaskLine} colorMaskHover={props.colorMaskHover}>
-                        <Link size={props.size} weight={props.weight} href={`#${index}`}>
+                    return <ListItem key={index} colorMaskLine={props.colorMaskLine} colorMaskHover={props.colorMaskHover} >
+                        <Link size={props.size} proTabletSize={props.proTabletSize} weight={props.weight} href={`#${index}`}>
                                 {item}
                             <Mask colorMask={props.colorMask}>
                                 <span>{item}</span>
@@ -33,16 +34,16 @@ export const Menu = (props: MenuPropsType) => {
     )
 }
 
-const Link = styled.a<{weight?: string, size?: string}>`
+const Link = styled.a<{weight?: string, size?: string, proTabletSize?: string}>`
     color: transparent;
     font-weight: ${props => props.weight};
     font-size: ${props => props.size};
 
     @media ${theme.media.proTablet} {
-        font-size: 3rem;
+        font-size: ${props => props.proTabletSize};
     }
-    @media ${theme.media.mobile} {
-        font-size: 1.6rem;
+    @media ${theme.media.miniTablet} {
+        font-size: 2rem;
     }
 `
 
@@ -55,8 +56,11 @@ const StyledMenu = styled.nav`
         font-family: 'DM Sans', sans-serif;
     }
 
-    @media ${theme.media.proTablet} {
-        max-width: 810px;
+    @media ${theme.media.miniTablet} {
+        ul {
+            flex-direction: column;
+            gap: 15px;
+        }
     }
 
     @media ${theme.media.mobile} {
