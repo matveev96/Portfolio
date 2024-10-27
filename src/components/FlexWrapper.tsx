@@ -4,9 +4,10 @@ import { theme } from "../styles/Theme";
 
 type FlexWrapperPropsType = {
     direction?: string,
+    miniTabletDirection?: string,
     justfy?: string,
     tabletJustify?: string,
-    mobileJustify?: string,
+    miniTabletJustify?: string,
     align?: string,
     mobileAlign?: string,
     wrap?: string,
@@ -26,9 +27,15 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
         justify-content: ${props => props.tabletJustify};
     }
 
+    @media ${theme.media.miniTablet} {
+        flex-direction: ${props => props.miniTabletDirection};
+        justify-content: ${props => props.miniTabletJustify};
+    }
+
     @media ${theme.media.mobile} {
         align-items: ${props => props.mobileAlign};
-        justify-content: ${props => props.mobileJustify};
+        
     }
+
 
 `

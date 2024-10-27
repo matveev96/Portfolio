@@ -5,6 +5,7 @@ type TextPropsType = {
     color?: string,
     weight?: string,
     marginBtm?: string,
+    marginTop?: string,
     grow?: number,
     fontSizeTablet?: string
 
@@ -16,6 +17,7 @@ export const SectionText = styled.p<TextPropsType>`
     font-size: 1.8rem;
     line-height: 1.4;
     margin-bottom: ${props => props.marginBtm};
+    margin-top: ${props => props.marginTop};
     flex-grow: ${props => props.grow};
 
     @media ${theme.media.proTablet} {
