@@ -7,6 +7,7 @@ type SubtitlePropsType = {
     fontSize?: number,
     marginBtm?: string,
     marginBtmTablet?: string,
+    marginBtmMobile?: string,
     weight?: string
 }
 
@@ -19,6 +20,9 @@ export const SectionSubtitle = styled.h4<SubtitlePropsType>`
     margin-bottom: ${props => props.marginBtm};
 
     @media ${theme.media.proTablet} {
-           margin-bottom: ${props => props.marginBtmTablet};
+        margin-bottom: 30px;
+    }
+    @media ${theme.media.mobile} {
+        margin-bottom: ${props => props.marginBtmMobile};
     }
 `
