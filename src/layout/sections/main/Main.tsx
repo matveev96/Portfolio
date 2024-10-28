@@ -35,19 +35,19 @@ const StyledMain = styled.section`
         height: auto;
     }
 
-    /* @media ${theme.media.mobile} {
+    /* @media ${theme.media.miniTablet} {
         height: 80vh;
     } */
 `
 
 const TextWrapper = styled.div`
     max-width: 636px;
-    width: 100%;
     ${font({weight: 700, Fmax: 58, Fmin: 36})};
     color: ${theme.colors.font.darkTitle};
 
     @media ${theme.media.proTablet} {
         margin: 50px 0;
+        padding-right: 20px;
     }
 `
 
@@ -108,17 +108,12 @@ const PhotoWrapper = styled.div`
 
 
     @media ${theme.media.proTablet} {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         margin: 10px 0;
         &::after {
             display: none;
         }
-    }
-
-    @media ${theme.media.mobile} {
-        width: 250px;
-        height: 250px;
     }
 `
 
