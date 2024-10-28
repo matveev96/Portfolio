@@ -72,6 +72,10 @@ const AboutInfo = styled.div`
 
 const StyledSection = styled.div`
     margin-bottom: 38px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 `
 
 const Title = styled.h3`
@@ -81,5 +85,6 @@ const Title = styled.h3`
 
     @media ${theme.media.proTablet} {
         text-align: center;
+        margin-bottom: 2.2rem;
     }
 `

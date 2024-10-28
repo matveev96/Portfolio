@@ -18,7 +18,7 @@ export const Projects = () => {
         <StyledProjects id="3">
             <Container>
                 <SectionTitle align="center" fontSize={48} color={theme.colors.font.darkTitle} marginBtm="50px" marginBtmTablet="20px">Projects</SectionTitle>
-                <SectionSubtitle fontSize={32} align="center" color={theme.colors.font.darkContent} marginBtm="130px" marginBtmTablet="50px">Things I’ve built so far</SectionSubtitle>
+                <SectionSubtitle fontSize={32} align="center" color={theme.colors.font.darkContent} marginBtm="124px" marginBtmTablet="50px">Things I’ve built so far</SectionSubtitle>
                 <GridWrapper>
                     <Project src={projectOne} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />
                     <Project src={projectTwo} title={"Project Tile goes here"} list={"HTML , JavaScript, SASS, React"} text={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"} />

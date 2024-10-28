@@ -13,7 +13,7 @@ export const Skills = () => {
         <StyledSkills id="2">
             <Container>
                 <SectionTitle align="center" fontSize={48} color={theme.colors.font.darkTitle} marginBtm="50px" marginBtmTablet="20px">My Tech Stack</SectionTitle>
-                <SectionSubtitle fontSize={32} align="center" color={theme.colors.font.darkContent} marginBtm="130px" marginBtmTablet="50px"> Technologies I’ve been working with recently</SectionSubtitle>
+                <SectionSubtitle fontSize={32} align="center" color={theme.colors.font.darkContent} marginBtm="124px" marginBtmTablet="50px"> Technologies I’ve been working with recently</SectionSubtitle>
                 <GridWrapper>
                     <Skill iconId={"html"}/>
                     <Skill iconId={"css"}/>

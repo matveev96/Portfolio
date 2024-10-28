@@ -22,7 +22,7 @@ export const Project = (props: ProjectPropsType) => {
             </ImageBox>
 
             <ContentBox>
-                <SectionSubtitle weight="500" color={theme.colors.font.black} fontSize={28} align="left" marginBtm="17px">{props.title}</SectionSubtitle>
+                <SectionSubtitle weight="500" color={theme.colors.font.black} fontSize={28} align="left" marginBtm="17px" marginBtmMobile="10px">{props.title}</SectionSubtitle>
                 <SectionText weight="300" color={theme.colors.font.darkContent} marginBtm="12px" grow={1} >{props.text}</SectionText>
                 <Stack>Tech stack: <StyledStackList>{props.list}</StyledStackList></Stack>
 
