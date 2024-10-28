@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Menu } from "../../components/menu/Menu";
+import { MenuDesktop } from "../../components/menu/MenuDesktop";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
 import { Logo } from "../../components/logo/Logo";
@@ -26,7 +26,7 @@ export const Footer = () => {
                     </InfoBox>
                     
                     <InfoBox>
-                        <Menu menuItems={items} weight="400" size="1.8rem" colorMask={theme.colors.font.darkTitle} colorMaskLine={theme.colors.font.contactsTitle} colorMaskHover={theme.colors.font.contactsTitle}/>
+                        <MenuDesktop menuItems={items} weight="400" size="1.8rem" colorMask={theme.colors.font.darkTitle} colorMaskLine={theme.colors.font.contactsTitle} colorMaskHover={theme.colors.font.contactsTitle}/>
                         <Copyright>
                             <ColorText>Designed and built by </ColorText>Pavan MG<ColorText> with </ColorText>Love<ColorText> & </ColorText>Coffee
                         </Copyright>
