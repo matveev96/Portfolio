@@ -1,6 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import { theme } from '../../styles/Theme';
+import { theme } from "../../styles/Theme";
+import styled from "styled-components";
 
 type MenuPropsType = {
     menuItems: Array<string>,
@@ -12,25 +12,23 @@ type MenuPropsType = {
     colorMaskLine?: string
 }
 
-export const Menu = (props: MenuPropsType) => {
+export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
     return (
-        <StyledMenu>
-            <ul>
-                {props.menuItems.map((item: string, index: number) => {
-                    return <ListItem key={index} colorMaskLine={props.colorMaskLine} colorMaskHover={props.colorMaskHover} >
-                        <Link size={props.size} proTabletSize={props.proTabletSize} weight={props.weight} href={`#${index}`}>
-                                {item}
-                            <Mask colorMask={props.colorMask}>
-                                <span>{item}</span>
-                            </Mask>
-                            <Mask colorMask={props.colorMask}>
-                                <span>{item}</span>
-                            </Mask>
-                        </Link>
-                    </ListItem>
-                })}
-            </ul>
-        </StyledMenu>
+        <ul>
+            {props.menuItems.map((item: string, index: number) => {
+                return <ListItem key={index} colorMaskLine={props.colorMaskLine} colorMaskHover={props.colorMaskHover} >
+                    <Link size={props.size} proTabletSize={props.proTabletSize} weight={props.weight} href={`#${index}`}>
+                            {item}
+                        <Mask colorMask={props.colorMask}>
+                            <span>{item}</span>
+                        </Mask>
+                        <Mask colorMask={props.colorMask}>
+                            <span>{item}</span>
+                        </Mask>
+                    </Link>
+                </ListItem>
+            })}
+        </ul>   
     )
 }
 
@@ -45,28 +43,6 @@ const Link = styled.a<{weight?: string, size?: string, proTabletSize?: string}>`
     @media ${theme.media.miniTablet} {
         font-size: 2rem;
     }
-`
-
-const StyledMenu = styled.nav`
-    max-width: 610px;
-    width: 100%;
-    ul {
-        display: flex;
-        justify-content: space-between;
-        font-family: 'DM Sans', sans-serif;
-    }
-
-    @media ${theme.media.miniTablet} {
-        ul {
-            flex-direction: column;
-            gap: 15px;
-        }
-    }
-
-    @media ${theme.media.mobile} {
-        max-width: 510px;
-    }
-
 `
 
 const Mask = styled.span<{colorMask?: string}>`

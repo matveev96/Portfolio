@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { theme } from '../../styles/Theme';
+import { Menu } from './Menu';
 import { Socials } from "../socials/Socials";
 
 
@@ -21,22 +22,7 @@ export const MenuMobile = (props: MenuPropsType) => {
             </BurgerButton>
 
             <MenuMobilePopup isOpen={false}>
-                <MobileList>
-                    {props.menuItems.map((item: string, index: number) => {
-                        return <ListItem key={index} colorMaskLine={props.colorMaskLine} colorMaskHover={props.colorMaskHover}>
-                            <Link size={props.size} weight={props.weight} href={`#${index}`}>
-                                    {item}
-                                <Mask colorMask={props.colorMask}>
-                                    <span>{item}</span>
-                                </Mask>
-                                <Mask colorMask={props.colorMask}>
-                                    <span>{item}</span>
-                                </Mask>
-                            </Link>
-                        </ListItem>
-                    })}
-                    <Socials colorSVG={theme.colors.font.darkContent} />
-                </MobileList>
+                <Menu menuItems={props.menuItems} weight="500" size="3rem" colorMask={theme.colors.font.darkContent} colorMaskLine={theme.colors.font.lightContent} colorMaskHover={theme.colors.font.lightContent}/>
             </MenuMobilePopup>
 
         </StyledMenuMobile>
@@ -46,11 +32,11 @@ export const MenuMobile = (props: MenuPropsType) => {
 
 
 const StyledMenuMobile = styled.nav`
-    display: none;
+    /* display: none; */
 
-    @media ${theme.media.miniTablet} {
+    /* @media ${theme.media.miniTablet} {
         display: block;
-    }
+    } */
 
 `
 
@@ -113,6 +99,15 @@ const MenuMobilePopup = styled.div<{isOpen: boolean}>`
     bottom: 0;
     z-index: 9999;
     display: none;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-family: 'DM Sans', sans-serif;
+    }
     
 
     ${props => props.isOpen && css<{isOpen: boolean}>`
@@ -123,73 +118,5 @@ const MenuMobilePopup = styled.div<{isOpen: boolean}>`
         background-color: ${theme.colors.pageBg.lightMode};
     `}
 
-
-`
-
-const MobileList = styled.ul`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        font-family: 'DM Sans', sans-serif;
-`
-
-const Link = styled.a<{weight?: string, size?: string}>`
-    color: transparent;
-    font-weight: ${props => props.weight};
-    font-size: ${props => props.size};
-`
-
-const Mask = styled.span<{colorMask?: string}>`
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    height: 50%;
-    overflow-y: hidden;
-    color: ${props => props.colorMask};
-    transition: .2s all ease-in;
-    
-    & + & {
-        top: 50%;
-        span {
-            display: inline-block;
-            transform: translateY(-50%);
-        }
-    }
-`
-
-const ListItem = styled.li<{colorMaskLine?: string, colorMaskHover?: string}>`
-    position: relative;
-
-    &::before {
-        content: "";
-        display: inline-block;
-        height: 2px;
-        background-color: ${props => props.colorMaskLine};
-
-        position: absolute;
-        top: 50%;
-        left: -10px;
-        right: -10px;
-        z-index: 1;
-
-        transform: scale(0);
-    }
-
-    &:hover {
-        &::before {
-            transform: scale(1);
-        }
-
-        ${Mask} {
-            transform: skewX(12deg) translateX(5px);
-            color: ${props => props.colorMaskHover};
-            & + ${Mask} {
-            transform: skewX(12deg) translateX(-5px);
-            }
-        }
-    }
 
 `
