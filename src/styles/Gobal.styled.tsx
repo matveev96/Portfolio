@@ -29,13 +29,8 @@ export const GlobalStyle = createGlobalStyle`
 
         padding-top: 140px;
 
-        @media ${theme.media.proTablet} {
-            padding-top: 260px;
-        }
+        min-width: 360px;
 
-        @media ${theme.media.miniTablet} {
-            padding-top: 100px;
-        }
 }
 
 a {
@@ -55,11 +50,9 @@ section {
     margin-bottom: 200px;
 
     @media ${theme.media.proTablet} {
-        margin-bottom: 70px;
-    }
-    @media ${theme.media.mobile} {
         margin-bottom: 50px;
     }
+
 }
 
 
@@ -70,6 +63,5 @@ section {
         animation: none !important;
     } 
 }
-
 
 `
