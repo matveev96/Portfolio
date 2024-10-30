@@ -1,90 +1,36 @@
 import React from "react";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import styled from "styled-components";
 import { Card } from "./card/Card";
 import { SectionText } from "../../../components/SectionText";
 import { Container } from "../../../components/Container";
-import { theme } from "../../../styles/Theme";
-import AbstractAbout from "../../../assets/images/AbstractAbout.svg"
-import { font } from "../../../styles/Common";
+import { S } from "./About_Styles";
 
-export const About = () => {
+export const About: React.FC = () => {
     return (
-            <StyledAbout id="1">
+            <S.About id="about">
                 <Container>
                     <FlexWrapper tabletJustify="center">
-                        <AboutInfo>
-                            <StyledSection>
-                                <Title>About Me</Title>
+                        <S.AboutInfo>
+                            <S.InfoBlock>
+                                <S.Title>About Me</S.Title>
                                 <SectionText>The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</SectionText>
-                            </StyledSection>
+                            </S.InfoBlock>
 
-                            <StyledSection>
-                                <Title>Work Experience</Title>
+                            <S.InfoBlock>
+                                <S.Title>Work Experience</S.Title>
                                 <Card margin="30px" position="Junior Web Developer" occupation="Full Time" organization="Dr. Rajkumar’s Learning App" city="Bengaluru" period="Sep 2021 - Dec 2021"/>
                                 <Card margin="30px" position="Web Development Intern" occupation="Internship" organization="IonPixelz Web Solutions" city="Bengaluru" period="Sep 2021 - Dec 2021"/>
                                 <Card position="SEO / SEM Specialist" occupation="Internship" organization="HAAPS" city="Bengaluru" period="Sep 2021 - Dec 2021"/>
-                            </StyledSection>
+                            </S.InfoBlock>
 
-                            <StyledSection>
-                                <Title>Education</Title>
+                            <S.InfoBlock>
+                                <S.Title>Education</S.Title>
                                 <Card position="Bachelor in Electronics & Communication" occupation="Full Time" organization="Bangalore Instutute of Technology" display="none" period="Aug 2015 - Dec 2020"/>
-                            </StyledSection>
-                        </AboutInfo>                        
+                            </S.InfoBlock>
+                        </S.AboutInfo>                        
                     </FlexWrapper>
                 </Container>
-            </StyledAbout>
+            </S.About>
     )
 }
 
-
-const StyledAbout = styled.section`
-    position: relative;
-    overflow: hidden;
-
-    &::after {
-        content: "";
-        top: -15%;
-        left: 65%;
-        display: block;
-        width: 935px;
-        height: 1019px;
-        background-image: url(${AbstractAbout});
-        background-repeat: no-repeat;
-
-        position: absolute;
-    }
-
-    @media ${theme.media.proTablet} {
-        &::after {
-        display: none;
-    }
-    }
-
-`
-
-const AboutInfo = styled.div`
-    max-width: 710px;
-    width: 100%;
-    overflow: hidden;
-
-`
-
-const StyledSection = styled.div`
-    margin-bottom: 38px;
-
-    &:last-of-type {
-        margin-bottom: 0;
-    }
-`
-
-const Title = styled.h3`
-    ${font({weight: 700, Fmax: 42, Fmin: 32})};
-    color: ${theme.colors.font.darkTitle};
-    margin-bottom: 3.8rem;
-
-    @media ${theme.media.proTablet} {
-        text-align: center;
-        margin-bottom: 2.2rem;
-    }
-`
