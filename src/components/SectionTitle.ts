@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { font } from "../styles/Common";
 import { theme } from "../styles/Theme";
+import React from "react";
 
 type TitlePropsType = {
         align?: string,
@@ -12,11 +13,15 @@ type TitlePropsType = {
 }
 
 export const SectionTitle = styled.h2<TitlePropsType>`
-        
-        font-family: ${props => props.family};
-        font-weight: 700;
-        font-size: calc((100vw - 576px)/(1600 - 576) * (${props => props.fontSize} - 36) + 36px);
-        color: ${props => props.color};
+
+        ${({ family, fontSize, color }) =>
+        font({
+            family: family,
+            weight: 700,
+            color: color,
+            Fmin: 36,
+            Fmax: fontSize
+        })};
 
         text-align: ${props => props.align || "center"};
         margin-bottom: ${props => props.marginBtm};
