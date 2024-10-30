@@ -1,24 +1,16 @@
 import React from "react";
-import styled from "styled-components";
 import { Icon } from "../../../../components/icon/Icon";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { S } from "../Skills_Styles";
 
 type SkillPropsType = {
     iconId: string,
     viewBox?: string
 }
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
     return (
-        <StyledSkill>
+        <S.Skill>
             <Icon iconId={props.iconId} viewBox={props.viewBox} width="110px" height="110px"/>
-        </StyledSkill>
+        </S.Skill>
     )
 }
-
-const StyledSkill = styled.div`
-    width: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
