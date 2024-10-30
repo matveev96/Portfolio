@@ -1,54 +1,41 @@
 import React from "react";
 import { Icon } from '../icon/Icon';
-import styled from "styled-components";
-import { theme } from "../../styles/Theme";
+import { S } from "./Socials_Styled";
 
-type SocialPropsType = {
+
+export type SocialPropsType = {
     hoverColor?: string,
     colorSVG?: string
 }
 
-export const Socials = (props:SocialPropsType) => {
+const socialsData = [
+    {
+        iconId: "githubMini",
+        viwBox: "0 0 30 32"
+    },
+    {
+        iconId: "twitterMini",
+        viwBox: "0 0 30 32"
+    },
+    {
+        iconId: "linkdInMini",
+        viwBox: "0 0 30 30"
+    },
+]
+
+export const Socials: React.FC<SocialPropsType> = (props:SocialPropsType) => {
     return (
-        <SocialList>
-            <SocialItem>
-                <SocialLink href="#" colorSVG={props.colorSVG} hoverColor={props.hoverColor}>
-                    <Icon iconId={"githubMini"} height="30" width="30" viewBox="0 0 30 32" />
-                </SocialLink>
-            </SocialItem>
-            <SocialItem>
-                <SocialLink href="#" colorSVG={props.colorSVG} hoverColor={props.hoverColor}>
-                    <Icon iconId={"twitterMini"} height="30" width="30" viewBox="0 0 30 32" />
-                </SocialLink>
-            </SocialItem>
-            <SocialItem>
-                <SocialLink href="#" colorSVG={props.colorSVG} hoverColor={props.hoverColor}>
-                    <Icon iconId={"linkdInMini"} height="30" width="30" viewBox="0 0 30 30" />
-                </SocialLink>
-            </SocialItem>
-        </SocialList>
+        <S.SocialList>
+
+            {socialsData.map((s, index) => {
+                return <S.SocialItem>
+                            <S.SocialLink href="#" colorSVG={props.colorSVG} hoverColor={props.hoverColor}>
+                                <Icon iconId={s.iconId} height="30" width="30" viewBox={s.viwBox} />
+                            </S.SocialLink>
+                        </S.SocialItem>
+            })}
+
+        </S.SocialList>
     )
 }
 
-const SocialList = styled.ul`
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-
-    @media ${theme.media.proTablet} {
-        gap: 30px;
-    }
-`
-
-const SocialItem = styled.li`
-    list-style: none;
-`
-
-const SocialLink = styled.a<SocialPropsType>`
-    display: inline-block;
-    color: ${props => props.colorSVG};
-    &:hover {
-        color: ${props => props.hoverColor};
-        transform: translateY(-5%);
-    }
-`
