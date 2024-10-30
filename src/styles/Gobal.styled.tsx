@@ -35,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
 
 a {
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 ul {
@@ -48,6 +49,7 @@ button {
 
 section {
     margin-bottom: 200px;
+    scroll-margin-top: 140px;
 
     @media ${theme.media.proTablet} {
         margin-bottom: 50px;
