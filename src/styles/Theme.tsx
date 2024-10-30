@@ -8,7 +8,7 @@ export const theme = {
 
         occupationBg: "#d7ffe0",
         borderBg: "#ebeaed",
-        star: "#F4B600",
+        starYellow: "#F4B600",
 
         font: {
             darkContent: "#666",
