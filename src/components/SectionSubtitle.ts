@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 type SubtitlePropsType = {
     align?: string,
@@ -8,15 +9,20 @@ type SubtitlePropsType = {
     marginBtm?: string,
     marginBtmTablet?: string,
     marginBtmMobile?: string,
-    weight?: string
+    weight?: number
 }
 
 export const SectionSubtitle = styled.h4<SubtitlePropsType>`
-    font-weight: ${props => props.weight || "400"};
-    color: ${props => props.color};
+
+    ${({ fontSize, color, weight }) =>
+        font({
+            weight: weight || 400,
+            color: color,
+            Fmin: 22,
+            Fmax: fontSize
+    })};
+
     text-align: ${props => props.align || "center"};
-    font-size: ${props => props.fontSize};
-    font-size: calc((100vw - 576px)/(1600 - 576) * (${props => props.fontSize} - 22) + 22px);
     margin-bottom: ${props => props.marginBtm};
 
     @media ${theme.media.proTablet} {
