@@ -8,12 +8,11 @@ import { MenuMobile } from "../../components/menu/MenuMobile";
 import { MenuDesktop } from "../../components/menu/MenuDesktop";
 import { S } from "./Header_Styles";
 
-const items = ["Home", "About", "Tech Stack", "Projects", "Contacts"];
 
 export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
-    const breakpoint = 768;
+    const breakpoint = 769;
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)
@@ -27,13 +26,12 @@ export const Header: React.FC = () => {
                 <FlexWrapper justfy="space-between"  tabletJustify="center" miniTabletJustify="space-between" wrap="wrap" >
                     <Logo variation={'logoGradient'} />
 
-                    {width < breakpoint ?   <MenuMobile menuItems={items} />
+                    {width < breakpoint ?   <MenuMobile />
                                         :   <S.HeaderMenuDesktop>
-                                                <MenuDesktop menuItems={items} />
+                                                <MenuDesktop />
                                                 <Socials colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
                                             </S.HeaderMenuDesktop> 
                     }
-                    
                 </FlexWrapper>
             </Container>
         </S.Header>
