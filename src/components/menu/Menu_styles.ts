@@ -24,7 +24,7 @@ const Mask = styled.span<{colorMask?: string}>`
     height: 50%;
     overflow-y: hidden;
     color: ${props => props.colorMask};
-    transition: .2s all ease-in;
+    transition: ${theme.animations.transition};
     
     & + & {
         top: 50%;
@@ -69,7 +69,12 @@ const MenuItem = styled.li<{colorMaskLine?: string, colorMaskHover?: string}>`
 
 // Menu Mobile
 
-const MenuMobile = styled.nav`
+const MenuMobile = styled.nav<{isOpen: boolean}>`
+    height: 0;
+    transition: ${theme.animations.transition};
+    ${props => props.isOpen && css<{isOpen: boolean}>`
+        height: 100vh;
+    `}
 `
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
@@ -126,13 +131,24 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 `
 
 const MenuMobilePopup = styled.div<{isOpen: boolean}>`
+    
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 9999;
+    z-index: 99999;
     display: none;
+
+    transition: ${theme.animations.transition};
+    
+
+    ${props => props.isOpen && css<{isOpen: boolean}>`
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    `}
 
     ul {
         display: flex;
@@ -142,16 +158,6 @@ const MenuMobilePopup = styled.div<{isOpen: boolean}>`
         gap: 20px;
         font-family: 'DM Sans', sans-serif;
     }
-    
-
-    ${props => props.isOpen && css<{isOpen: boolean}>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: ${theme.colors.pageBg.lightMode};
-    `}
-
 `
 
 // Desktop Menu

@@ -7,7 +7,7 @@ export type MenuPropsType = {
     proTabletSize?: string,
     colorMask?: string,
     colorMaskHover?: string,
-    colorMaskLine?: string
+    colorMaskLine?: string,
 }
 
 
