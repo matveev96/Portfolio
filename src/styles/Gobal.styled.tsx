@@ -26,9 +26,6 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.font.darkContent};
         background-color: ${theme.colors.pageBg.lightMode};
-
-        padding-top: 140px;
-
         min-width: 360px;
 
 }
@@ -45,18 +42,22 @@ ul {
 button {
     background-color: unset;
     border: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 section {
-    margin-bottom: 200px;
-    scroll-margin-top: 140px;
+    padding-top: 140px;
+    margin-bottom: 60px;
 
     @media ${theme.media.proTablet} {
-        margin-bottom: 50px;
+        margin-bottom: 0;
+    }
+
+    @media ${theme.media.miniTablet} {
+        padding-top: 110px;
     }
 
 }
-
 
 @media (performance-reduced-motion: reduce) {
     *,
@@ -65,5 +66,4 @@ section {
         animation: none !important;
     } 
 }
-
 `
