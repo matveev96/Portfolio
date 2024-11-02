@@ -4,6 +4,7 @@ import { font } from "../../../styles/Common"
 import photo from "../../../assets/images/avatar.webp"
 import svgSprite from "./../../../assets/images/icons_sprite.svg"
 
+
 const Main = styled.section`
     display: flex;
     height: 80vh;
@@ -15,11 +16,16 @@ const Main = styled.section`
 
 const TextWrapper = styled.div`
     max-width: 636px;
-    ${font({weight: 700, Fmax: 58, Fmin: 36, color: `${theme.colors.font.darkTitle}`})};
+
+    ${font({weight: 700, Fmax: 58, Fmin: 36, color: `${theme.colors.font.darkTitle}`})}
 
     @media ${theme.media.proTablet} {
+        width: 100%;
         margin: 50px 0;
-        padding-right: 20px;
+    }
+
+    @media ${theme.media.mobile} {
+        height: 216px;
     }
 `
 
@@ -34,9 +40,14 @@ const MainName = styled.h2`
 const MainTitle = styled.h1`
     font-size: inherit;
     white-space: nowrap;
+
     @media ${theme.media.mobile} {
         white-space: normal;
     }
+`
+
+const MainTitleSpan = styled.span`
+    display: none;
 `
 
 const MainText = styled.p`
@@ -79,12 +90,15 @@ const PhotoWrapper = styled.div`
     }
 
     @media ${theme.media.proTablet} {
-        width: 250px;
-        height: 250px;
         margin: 10px 0;
         &::after {
             display: none;
         }
+    }
+
+    @media ${theme.media.mobile} {
+        width: 250px;
+        height: 250px;
     }
 `
 
@@ -93,6 +107,7 @@ export const S = {
     TextWrapper,
     MainName,
     MainTitle,
+    MainTitleSpan,
     MainText,
     PhotoWrapper
 }
