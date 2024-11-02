@@ -4,6 +4,9 @@ import { theme } from "../../styles/Theme";
 
 const Footer = styled.footer`
     padding-bottom: 60px;
+    @media ${theme.media.proTablet} {
+        margin-top: 60px;
+    }
 `
 
 const ContactsContainer = styled.div`
@@ -38,7 +41,8 @@ const Copyright = styled.small`
 
     @media ${theme.media.miniTablet} {
         position: absolute;
-        bottom: -20%;
+        bottom: -10%;
+        left: 0;
         width: 360px;
     }
 `
@@ -83,6 +87,12 @@ const InfoBox = styled.div`
         }
     }
 
+    &:last-child {
+    @media ${theme.media.proTablet} {
+            justify-content: center;
+            gap: 10px;
+        }
+    }
 `
 
 export const S = {
