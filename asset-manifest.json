@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.bd1d580b.css",
-    "main.js": "./static/js/main.11c54b23.js",
+    "main.js": "./static/js/main.e712d380.js",
     "static/js/787.6658d8b7.chunk.js": "./static/js/787.6658d8b7.chunk.js",
     "static/media/project_6.webp": "./static/media/project_6.e4bda2e5bd90c2dd9ee1.webp",
     "static/media/project_1.webp": "./static/media/project_1.71a544d741ebc24aa24a.webp",
@@ -11,16 +11,16 @@
     "static/media/project_2.webp": "./static/media/project_2.771ad006f4795b6af4b7.webp",
     "static/media/project_3.webp": "./static/media/project_3.71014dc37ffb4c0421bb.webp",
     "static/media/Dude_2.webp": "./static/media/Dude_2.7664f2f776c2b821e965.webp",
-    "static/media/icons_sprite.svg": "./static/media/icons_sprite.d479f5f6f74358f2ec533ece848887a5.svg",
+    "static/media/icons_sprite.svg": "./static/media/icons_sprite.99b3d1f4ee5aa9dc9ed3903a148e835f.svg",
     "static/media/avatar.webp": "./static/media/avatar.ab639021a875a5efff1e.webp",
     "static/media/Dude.webp": "./static/media/Dude.1bba61cb51d48774d450.webp",
     "index.html": "./index.html",
     "main.bd1d580b.css.map": "./static/css/main.bd1d580b.css.map",
-    "main.11c54b23.js.map": "./static/js/main.11c54b23.js.map",
+    "main.e712d380.js.map": "./static/js/main.e712d380.js.map",
     "787.6658d8b7.chunk.js.map": "./static/js/787.6658d8b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd1d580b.css",
-    "static/js/main.11c54b23.js"
+    "static/js/main.e712d380.js"
   ]
 }
