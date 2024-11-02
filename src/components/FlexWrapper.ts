@@ -5,6 +5,7 @@ import { theme } from "../styles/Theme";
 type FlexWrapperPropsType = {
     direction?: string,
     miniTabletDirection?: string,
+    proTabletDirection?: string,
     justfy?: string,
     tabletJustify?: string,
     miniTabletJustify?: string,
@@ -25,6 +26,7 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
 
     @media ${theme.media.proTablet} {
         justify-content: ${props => props.tabletJustify};
+        flex-direction: ${props => props.proTabletDirection};
     }
 
     @media ${theme.media.miniTablet} {
