@@ -13,6 +13,11 @@ export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 769;
+    const [position, setPosition] = React.useState(document.documentElement.scrollTop)
+    const [visible, setVisible] = React.useState(true)
+    // const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
+
+    // Изменение меню desktop на mobile
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)
@@ -20,13 +25,32 @@ export const Header: React.FC = () => {
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
 
+    // Открытие-закрытие header по свайпу и скроллу
+
+    React.useEffect(() => {
+        const handlescroll = () => {
+
+                let moving = document.documentElement.scrollTop;
+
+                setVisible(position > moving);
+                setPosition(moving) 
+            
+        };
+
+        window.addEventListener("scroll", handlescroll);
+        
+        return(() => {
+            window.removeEventListener("scroll", handlescroll)
+        })
+    }, [position])
+
     return (
-        <S.Header>
+        <S.Header isOpen={visible}>
             <Container>
                 <FlexWrapper justfy="space-between"  tabletJustify="center" miniTabletJustify="space-between" wrap="wrap" >
                     <Logo variation={'logoGradient'} />
 
-                    {width < breakpoint ?   <MenuMobile />
+                    {width < breakpoint ?   <MenuMobile/>
                                         :   <S.HeaderMenuDesktop>
                                                 <MenuDesktop />
                                                 <Socials colorSVG={theme.colors.font.darkContent} hoverColor={theme.colors.font.lightContent}/>
@@ -34,6 +58,7 @@ export const Header: React.FC = () => {
                     }
                 </FlexWrapper>
             </Container>
+            
         </S.Header>
     )
 }
