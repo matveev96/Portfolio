@@ -7,6 +7,7 @@ import { Projects } from './layout/sections/projects/Projects';
 import { Contacts } from './layout/sections/contacts/Contacts';
 import { Footer } from './layout/footer/Footer';
 import { Testimony } from './layout/sections/testimony/Testimony';
+import { GoTopBtn } from './components/goTopBtn/GoTopBtn';
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <Testimony/>
             <Contacts/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     );
 }
