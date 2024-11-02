@@ -21,7 +21,6 @@ export const theme = {
             gradient: "linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%)",
             black: "#000"
         }
-        
     },
 
     media: {
@@ -29,5 +28,9 @@ export const theme = {
         proTablet: "screen and (max-width: 1024px)",
         miniTablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 576px)"
+    },
+
+    animations: {
+        transition: ".2s ease-in-out"
     }
 }
