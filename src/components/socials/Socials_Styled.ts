@@ -19,6 +19,7 @@ const SocialItem = styled.li`
 const SocialLink = styled.a<SocialPropsType>`
     display: inline-block;
     color: ${props => props.colorSVG};
+    transition: ${theme.animations.transition};
     &:hover {
         color: ${props => props.hoverColor};
         transform: translateY(-5%);
