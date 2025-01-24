@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "./static/css/main.bd1d580b.css",
-    "main.js": "./static/js/main.e712d380.js",
-    "static/js/787.6658d8b7.chunk.js": "./static/js/787.6658d8b7.chunk.js",
-    "static/media/project_6.webp": "./static/media/project_6.e4bda2e5bd90c2dd9ee1.webp",
-    "static/media/project_1.webp": "./static/media/project_1.71a544d741ebc24aa24a.webp",
-    "static/media/project_5.webp": "./static/media/project_5.4e19467d9ae377637d88.webp",
-    "static/media/girl.webp": "./static/media/girl.956f1e479781a1635945.webp",
-    "static/media/project_4.webp": "./static/media/project_4.f57bc0a3005dfe1dcfde.webp",
-    "static/media/project_2.webp": "./static/media/project_2.771ad006f4795b6af4b7.webp",
-    "static/media/project_3.webp": "./static/media/project_3.71014dc37ffb4c0421bb.webp",
-    "static/media/Dude_2.webp": "./static/media/Dude_2.7664f2f776c2b821e965.webp",
-    "static/media/icons_sprite.svg": "./static/media/icons_sprite.99b3d1f4ee5aa9dc9ed3903a148e835f.svg",
-    "static/media/avatar.webp": "./static/media/avatar.ab639021a875a5efff1e.webp",
-    "static/media/Dude.webp": "./static/media/Dude.1bba61cb51d48774d450.webp",
-    "index.html": "./index.html",
-    "main.bd1d580b.css.map": "./static/css/main.bd1d580b.css.map",
-    "main.e712d380.js.map": "./static/js/main.e712d380.js.map",
-    "787.6658d8b7.chunk.js.map": "./static/js/787.6658d8b7.chunk.js.map"
+    "main.css": "/PortfolioReact/static/css/main.bd1d580b.css",
+    "main.js": "/PortfolioReact/static/js/main.190852dd.js",
+    "static/js/787.6658d8b7.chunk.js": "/PortfolioReact/static/js/787.6658d8b7.chunk.js",
+    "static/media/project_6.webp": "/PortfolioReact/static/media/project_6.e4bda2e5bd90c2dd9ee1.webp",
+    "static/media/project_1.webp": "/PortfolioReact/static/media/project_1.71a544d741ebc24aa24a.webp",
+    "static/media/project_5.webp": "/PortfolioReact/static/media/project_5.4e19467d9ae377637d88.webp",
+    "static/media/girl.webp": "/PortfolioReact/static/media/girl.956f1e479781a1635945.webp",
+    "static/media/project_4.webp": "/PortfolioReact/static/media/project_4.f57bc0a3005dfe1dcfde.webp",
+    "static/media/project_2.webp": "/PortfolioReact/static/media/project_2.771ad006f4795b6af4b7.webp",
+    "static/media/project_3.webp": "/PortfolioReact/static/media/project_3.71014dc37ffb4c0421bb.webp",
+    "static/media/Dude_2.webp": "/PortfolioReact/static/media/Dude_2.7664f2f776c2b821e965.webp",
+    "static/media/icons_sprite.svg": "/PortfolioReact/static/media/icons_sprite.99b3d1f4ee5aa9dc9ed3903a148e835f.svg",
+    "static/media/avatar.webp": "/PortfolioReact/static/media/avatar.ab639021a875a5efff1e.webp",
+    "static/media/Dude.webp": "/PortfolioReact/static/media/Dude.1bba61cb51d48774d450.webp",
+    "index.html": "/PortfolioReact/index.html",
+    "main.bd1d580b.css.map": "/PortfolioReact/static/css/main.bd1d580b.css.map",
+    "main.190852dd.js.map": "/PortfolioReact/static/js/main.190852dd.js.map",
+    "787.6658d8b7.chunk.js.map": "/PortfolioReact/static/js/787.6658d8b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd1d580b.css",
-    "static/js/main.e712d380.js"
+    "static/js/main.190852dd.js"
   ]
 }
