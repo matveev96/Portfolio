@@ -25,8 +25,7 @@ const skillData = [
         viewBox: "-5 -5 120 110"
     },
     {
-        iconId: "bootstrap",
-        viewBox: "-5 -5 100 100"
+        iconId: "ts"
     },
     {
         iconId: "tailwind",
@@ -41,7 +40,7 @@ const skillData = [
         viewBox: "-5 0 120 110"
     },
     {
-        iconId: "greenshock"
+        iconId: "greenshock",
     },
     {
         iconId: "vsCode"
