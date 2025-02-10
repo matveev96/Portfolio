@@ -28,10 +28,10 @@ const items = [
         title: "Projects",
         href: "projects"
     },
-    {
-        title: "Testimony",
-        href: "testimony"
-    },
+    // {
+    //     title: "Testimony",
+    //     href: "testimony"
+    // },
     {
         title: "Contacts",
         href: "contacts"
