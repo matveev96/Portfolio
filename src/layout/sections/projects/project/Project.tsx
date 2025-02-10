@@ -10,6 +10,8 @@ type ProjectPropsType = {
     src: string,
     list: string,
     iconId?: string,
+    code: string,
+    preview: string
 }
 
 export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
@@ -25,8 +27,8 @@ export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => 
                 <S.Stack>Tech stack: <S.StackList>{props.list}</S.StackList></S.Stack>
 
                 <S.LinkBox>
-                    <S.Link href="#" iconId="chain">Live Preview</S.Link>
-                    <S.Link href="#" iconId="gh-project">View Code</S.Link>
+                    <S.Link href={props.preview} iconId="chain" target="_blank">Live Preview</S.Link>
+                    <S.Link href={props.code} iconId="gh-project" target="_blank">View Code</S.Link>
                 </S.LinkBox>
             </S.ContentBox>
         </S.Project>
