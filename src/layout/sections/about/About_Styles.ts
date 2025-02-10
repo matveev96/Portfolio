@@ -3,7 +3,6 @@ import { font } from "../../../styles/Common";
 import styled from "styled-components";
 import svgSprite from "./../../../assets/images/icons_sprite.svg"
 
-
 const About = styled.section`
     position: relative;
     overflow: hidden;
@@ -31,7 +30,6 @@ const AboutInfo = styled.div`
     max-width: 710px;
     width: 100%;
     overflow: hidden;
-
 `
 
 const InfoBlock = styled.div`
