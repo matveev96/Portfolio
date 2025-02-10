@@ -15,39 +15,51 @@ import { S } from "./Projects_Styles";
 const projectsData = [
     {
         src: projectOne,
-        title: "Project Tile goes here",
-        list: "HTML , JavaScript, SASS, React",
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        preview: "https://matveev96.github.io/TaskManagementApp/",
+        code: "https://github.com/matveev96/TaskManagementApp",
+        title: "Task Management App",
+        list: "TypeScript, React, Redux, RTK, MaterialUI, REST API",
+        text: "Created a fully functional task management app with TypeScript, React, and Redux for state management. Implemented REST API interaction for task CRUD operations, and MaterialUI for UI components and UX improvements."
     },
     {
         src: projectTwo,
-        title: "Project Tile goes here",
-        list: "HTML , JavaScript, SASS, React",
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        preview: "https://matveev96.github.io/PortfolioReact/",
+        code: "https://github.com/matveev96/PortfolioReact",
+        title: "Portfolio",
+        list: "TypeScript, React, StyledComponents",
+        text: "Built a personal portfolio website using React and StyledComponents, showcasing projects and skills. Applied animations and effects to enhance user experience."
     },
     {
         src: projectThree,
-        title: "Project Tile goes here",
-        list: "HTML , JavaScript, SASS, React",
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        preview: "https://rolling-scopes-school.github.io/matveev96-JSFEPRESCHOOL2024Q2/shelter_2024/shelter/pages/main/",
+        code: "https://github.com/matveev96/PetPojects/tree/shelter-part3",
+        title: "Shelter Animal Adoption Website",
+        list: "HTML, CSS, SASS, JavaScript",
+        text: "Designed a responsive website for an animal shelter, utilizing HTML, CSS, SASS, and JavaScript. Added interactive features like a carousel and burger menu for mobile navigation. Ensured mobile and desktop optimization."
     },
     {
         src: projectFour,
-        title: "Project Tile goes here",
-        list: "HTML , JavaScript, SASS, React",
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        preview: "https://rolling-scopes-school.github.io/matveev96-JSFEPRESCHOOL2024Q2/js30-random-game/",
+        code: "https://github.com/matveev96/PetPojects/tree/js30-random-game",
+        title: "Flappy Bird Game",
+        list: "HTML, Canvas, CSS, SASS, JavaScript",
+        text: " Developed a browser-based game using JavaScript and HTML5 Canvas. Implemented difficulty levels, statistics tracking, and a smooth user interface."
     },
     {
         src: projectFive,
-        title: "Project Tile goes here",
-        list: "HTML , JavaScript, SASS, React",
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        preview: "https://rolling-scopes-school.github.io/matveev96-JSFEPRESCHOOL2024Q2/js30-image-gallery/",
+        code: "https://github.com/matveev96/PetPojects/tree/js30-image-gallery",
+        title: "Image Gallery with Unsplash API",
+        list: "HTML, CSS, SASS, JavaScript, Fetch API",
+        text: " Developed a dynamic image gallery using JavaScript and Fetch API, allowing users to search and display images from Unsplash. Added theme toggle for dark/light mode and ensured responsiveness across devices."
     },
     {
         src: projectSix,
-        title: "Project Tile goes here",
-        list: "HTML , JavaScript, SASS, React",
-        text: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+        preview: "https://matveev96.github.io/CounterPRO/",
+        code: "https://github.com/matveev96/CounterPRO",
+        title: "Counter",
+        list: "TypeScript, React, Redux, RTK, MaterialUI",
+        text: "Developed a simple counter application with the ability to increase/decrease values. Used Redux and Redux-Toolkit for managing the application's state. Integrated MaterialUI for interface components and UX optimization"
     }
 ]
 
@@ -65,7 +77,10 @@ export const Projects: React.FC = () => {
                         key={index}
                         title={p.title} 
                         list={p.list} 
-                        text={p.text} />
+                        text={p.text}
+                        code={p.code}
+                        preview={p.preview}
+                        />
                     })}
 
                 </S.GridWrapper>
