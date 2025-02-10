@@ -13,7 +13,7 @@ export const Main: React.FC = () => {
                     <S.TextWrapper>
                         <S.MainText>Hi 👋,</S.MainText>
                         <S.MainText>My name is</S.MainText>
-                        <S.MainName>PavanMG</S.MainName>
+                        <S.MainName>Aliaksandr Matsveyeu</S.MainName>
                         <S.MainTitle>
                             <S.MainTitleSpan>I build things for web</S.MainTitleSpan> 
                             <Typewriter
