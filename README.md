@@ -1,6 +1,10 @@
-# Portfolio Project on React.js
+# Portfolio
 
-In this project I used React.js, Styled components, git, figma. I learned how to create components, style them, work with props, decompose and refactor code. The application is adapted to the resolutions of tablets and mobile devices, the layout is responsive. Project link:
+## Technology stack:
+* JavaScript
+* TypeScript
+* React
+* StyledComponent
 
 ![img.png](img.png)
 
